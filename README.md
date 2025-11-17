@@ -1,6 +1,8 @@
 # ITS-HELPER
-unofficial doc for its magic
+**An Unofficial Documentation for ITS Magic**
 
-why i am making this 
-ans-> im unemployed free guy :).
-(i want to make open source doc)
+---
+
+## Why I’m Making This
+I’m just a free guy with some extra time 😄  
+I want to create an **open-source documentation** that’s helpful for everyone.
