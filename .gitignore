@@ -4,6 +4,9 @@
 # Production
 /build
 
+#Folder
+.obsidian/
+
 # Generated files
 .docusaurus
 .cache-loader
