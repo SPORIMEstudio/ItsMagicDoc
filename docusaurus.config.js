@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'ITs Helper',
+  tagline: 'Doc and Guide to work with ITs Magic Engine',
+  url: 'https://itshelper.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -57,9 +57,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'ITs Helper',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'ITs Helper',
           src: 'img/logo.svg',
         },
         items: [
@@ -84,8 +84,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'GetStarted',
                 to: '/docs/intro',
+              },
+              {
+                label: 'Contrubute to Doc',
+                href: 'https://github.com/itsdhanudev/itshelper',
               },
             ],
           },
@@ -115,7 +119,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/itsdhanudev/itshelper',
               },
             ],
           },
