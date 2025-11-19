@@ -84,8 +84,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'GetStarted',
                 to: '/docs/intro',
+              },
+              {
+                label: 'Contrubute to Doc',
+                href: 'https://github.com/itsdhanudev/itshelper',
               },
             ],
           },
@@ -115,7 +119,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/itsdhanudev/itshelper',
               },
             ],
           },
