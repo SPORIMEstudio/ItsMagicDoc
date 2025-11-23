@@ -94,8 +94,6 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
-
           // GitHub link
           {
             href: 'https://github.com/itsdhanudev/itshelper',
@@ -105,50 +103,46 @@ const config = {
         ],
       },
 
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Get Started',
-                to: '/docs/intro',
-              },
-              {
-                label: 'Contribute to Docs',
-                href: 'https://github.com/itsdhanudev/itshelper',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              { label: 'Blog', to: '/blog' },
-              { label: 'GitHub', href: 'https://github.com/itsdhanudev/itshelper' },
-            ],
-          },
-        ],
-        copyright:
-          `Copyright © ${new Date().getFullYear()} ITs Helper. Built with Docusaurus.`,
-      },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Documentation',
+          items: [
+            { label: 'Introduction', to: '/docs/intro' },
+            { label: 'Get Started', to: '/docs/get-started' },
+            { label: 'Manual', to: '/docs/manual/index' },
+            { label: 'Scripting Reference', to: '/docs/scripting-reference/index' },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'GitHub Discussions',
+              href: 'https://github.com/itsdhanudev/itshelper/discussions',
+            },
+            {
+              label: 'Report Issues',
+              href: 'https://github.com/itsdhanudev/itshelper/issues',
+            },
+            {
+              label: 'Contribute',
+              href: 'https://github.com/itsdhanudev/itshelper',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            { label: 'ITs Magic Engine', href: 'https://itsmagic.com.br' },
+            { label: 'Official Docs', href: 'https://itsmagic.com.br/documentation' },
+          ],
+        },
+      ],
+      copyright:
+        `Copyright © ${new Date().getFullYear()} ITs Helper.`,
+    },
 
       prism: {
         theme: prismThemes.github,
