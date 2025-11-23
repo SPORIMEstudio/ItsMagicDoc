@@ -1,27 +1,28 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ITs Helper',
   tagline: 'Doc and Guide to work with ITs Magic Engine',
-  url: 'https://itshelper.vercel.app',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  future: {
+    v4: true,
+  },
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  // Your site URL
+  url: 'https://itshelper.vercel.app',
+  baseUrl: '/',
+
+  // GitHub repo (not required for Vercel, but good metadata)
+  organizationName: 'itsdhanudev',
+  projectName: 'itshelper',
+
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -33,50 +34,77 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          sidebarPath: './sidebars.js',
+
+          editUrl: 'https://github.com/itsdhanudev/itshelper/tree/main/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+          },
+
+          editUrl: 'https://github.com/itsdhanudev/itshelper/tree/main/',
+
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: './src/css/custom.css',
         },
       }),
+    ],
+  ],
+
+  // 🔍 Local Search Plugin (NEW SEARCH BAR)
+  themes: [
+    [
+      require.resolve('@cmfcmf/docusaurus-search-local'),
+      {
+        indexDocs: true,
+        indexBlog: true,
+        indexPages: true,
+        language: "en",
+      },
     ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'img/docusaurus-social-card.jpg',
+
+      colorMode: {
+        respectPrefersColorScheme: true,
+      },
+
       navbar: {
         title: 'ITs Helper',
         logo: {
-          alt: 'ITs Helper',
+          alt: 'ITs Helper Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
+
+          // GitHub link
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/itsdhanudev/itshelper',
             label: 'GitHub',
             position: 'right',
           },
         ],
       },
+
       footer: {
         style: 'dark',
         links: [
@@ -84,11 +112,11 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'GetStarted',
+                label: 'Get Started',
                 to: '/docs/intro',
               },
               {
-                label: 'Contrubute to Doc',
+                label: 'Contribute to Docs',
                 href: 'https://github.com/itsdhanudev/itshelper',
               },
             ],
@@ -113,24 +141,20 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/itsdhanudev/itshelper',
-              },
+              { label: 'Blog', to: '/blog' },
+              { label: 'GitHub', href: 'https://github.com/itsdhanudev/itshelper' },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright:
+          `Copyright © ${new Date().getFullYear()} ITs Helper. Built with Docusaurus.`,
       },
+
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
     }),
 };
 
-module.exports = config;
+export default config;
