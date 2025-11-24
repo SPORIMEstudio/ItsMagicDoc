@@ -76,7 +76,7 @@ const config = {
           type: 'docSidebar',
           sidebarId: 'docsSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Doc',
         },
         { href: 'https://github.com/itsdhanudev/itshelper', label: 'GitHub', position: 'right' },
         { type: 'localeDropdown', position: 'right' },
