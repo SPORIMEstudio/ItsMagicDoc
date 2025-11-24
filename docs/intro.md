@@ -1,47 +1,62 @@
 ---
+title: Getting Started
+sidebar_label: Get Started
 sidebar_position: 1
+description: Learn how to set up ITs Helper engine and start your first project.
+keywords: [tutorial, setup, guide, ITs Helper]
+hide_title: false
+hide_table_of_contents: false
+tags: [beginner, guide]
+custom_edit_url: https://github.com/itsdhanudev/itshelper/edit/main/docs/get-started.md
 ---
 
-# Tutorial Intro
+# What is ITs Helper?
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**ITs Helper** is an unofficial, community-driven documentation platform for **ITs Magic Engine** – a powerful game development framework designed for creating interactive experiences with ease.
+
+## What is ITs Magic Engine?
+
+ITs Magic Engine is a simple but very advanced game engine made for Android and is one of the best right now.
+
+- **🎯 Comprehensive Guides**: Step-by-step tutorials for beginners to advanced developers  
+- **📚 Complete API Reference**: Detailed scripting documentation with examples  
+- **⚡ Quick Start**: Get your first project running in minutes  
+- **🔍 Searchable**: Find what you need instantly with local search  
+- **🌙 Developer-Friendly**: Dark mode support and clean, readable layout  
+
+## Key Features
+
+### Performance First  
+#### wait for update
+
+### Visual Editor  
+#### wait for update
+
+### Powerful Scripting  
+#### wait for update
+
+### Cross-Platform Deployment  
+#### wait for update
+
+## Quick Glossary  
+#### wait for update
 
 ## Getting Started
 
-Get started by **creating a new site**.
+Ready to dive in? Choose your path:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+1. **[Get Started](./get-started)** – Install ITs Magic and create your first project  
+2. **[Manual](./manual/manual-home)** – Learn core concepts and workflows  
+3. **[Scripting Reference](./scripting-reference/scripting-home)** – Explore the complete API  
 
-### What you'll need
+## Community & Support
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+This is an open-source documentation project maintained by the community. Contributions are welcome!
 
-## Generate a new site
+- **Report Issues** – Found an error? Let us know  
+- **Contribute** – Help improve these docs for everyone  
+- **Share** – Spread the word and help others discover ITs Helper  
 
-Generate a new Docusaurus site using the **classic template**.
+---
 
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Let's build something amazing together! 🚀
