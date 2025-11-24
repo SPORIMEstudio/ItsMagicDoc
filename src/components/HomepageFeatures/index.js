@@ -4,54 +4,46 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: '⚡ Performance',
-    icon: '🚀',
+    title: 'Easy to Use',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Built on modern architecture, ITs Magic Engine delivers exceptional performance
+        Docusaurus was designed from the ground up to be easily installed and
+        used to get your website up and running quickly.
       </>
     ),
   },
   {
-    title: '🎨 Visual Editor',
-    icon: '✏️',
+    title: 'Focus on What Matters',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Intuitive drag-and-drop interface lets you build scenes quickly. Real-time preview,
-        asset management, and component-based workflow streamline your game development process.
+        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
+        ahead and move your docs into the <code>docs</code> directory.
       </>
     ),
   },
   {
-    title: '💻 Powerful Scripting',
-    icon: '⚙️',
+    title: 'Powered by React',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Write game logic with a clean, flexible scripting API. Full Java support,
-        intellisense, debugging tools, and extensive standard library included out of the box.
-      </>
-    ),
-  },
-  {
-    title: '🌐 Deployment',
-    icon: '📦',
-    description: (
-      <>
-        Build once
+        Extend or customize your website layout by reusing React. Docusaurus can
+        be extended while reusing the same header and footer.
       </>
     ),
   },
 ];
 
-function Feature({icon, title, description}) {
+function Feature({Svg, title, description}) {
   return (
-    <div className={clsx('col col--3')}>
-      <div className={styles.featureCard}>
-        <div className={styles.featureIcon}>{icon}</div>
-        <div className="text--center padding-horiz--md">
-          <h3 className={styles.featureTitle}>{title}</h3>
-          <p className={styles.featureDescription}>{description}</p>
-        </div>
+    <div className={clsx('col col--4')}>
+      <div className="text--center">
+        <Svg className={styles.featureSvg} role="img" />
+      </div>
+      <div className="text--center padding-horiz--md">
+        <h3>{title}</h3>
+        <p>{description}</p>
       </div>
     </div>
   );
@@ -61,12 +53,6 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="text--center margin-bottom--lg">
-          <h2 className={styles.featuresTitle}>Why Choose ITs Magic Engine?</h2>
-          <p className={styles.featuresSubtitle}>
-            Everything you need to bring your creative vision to life
-          </p>
-        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

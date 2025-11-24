@@ -1,5 +1,4 @@
 // @ts-check
-
 import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
@@ -8,58 +7,48 @@ const config = {
   tagline: 'Doc and Guide to work with ITs Magic Engine',
   favicon: 'img/favicon.ico',
 
-  future: {
-    v4: true,
-  },
+  future: { v4: true },
 
-  // Your site URL
   url: 'https://itshelper.vercel.app',
   baseUrl: '/',
 
-  // GitHub repo (not required for Vercel, but good metadata)
   organizationName: 'itsdhanudev',
   projectName: 'itshelper',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  // ===== i18n =====
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'pt', 'hi'],
+    localeConfigs: {
+      en: { label: 'English' },
+      pt: { label: 'Português' },
+      hi: { label: 'Hinglish' },
+    },
   },
 
+  // ===== Presets =====
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: './sidebars.js',
-
           editUrl: 'https://github.com/itsdhanudev/itshelper/tree/main/',
         },
         blog: {
           showReadingTime: true,
-
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-
+          feedOptions: { type: ['rss', 'atom'], xslt: true },
           editUrl: 'https://github.com/itsdhanudev/itshelper/tree/main/',
-
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
         },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
+        theme: { customCss: './src/css/custom.css' },
       }),
     ],
   ],
 
-  // 🔍 Local Search Plugin (NEW SEARCH BAR)
+  // ===== Search =====
   themes: [
     [
       require.resolve('@cmfcmf/docusaurus-search-local'),
@@ -67,41 +56,31 @@ const config = {
         indexDocs: true,
         indexBlog: true,
         indexPages: true,
-        language: "en",
+        language: ['en', 'pt', 'hi'], // multi-language support
       },
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      image: 'img/docusaurus-social-card.jpg',
+  // ===== Theme Config =====
+  themeConfig: ({
+    image: 'img/docusaurus-social-card.jpg',
 
-      colorMode: {
-        respectPrefersColorScheme: true,
-      },
+    colorMode: { respectPrefersColorScheme: true },
 
-      navbar: {
-        title: 'ITs Helper',
-        logo: {
-          alt: 'ITs Helper Logo',
-          src: 'img/logo.svg',
+    navbar: {
+      title: 'ITs Helper',
+      logo: { alt: 'ITs Helper Logo', src: 'img/logo.svg' },
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'docsSidebar',
+          position: 'left',
+          label: 'Tutorial',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          // GitHub link
-          {
-            href: 'https://github.com/itsdhanudev/itshelper',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
+        { href: 'https://github.com/itsdhanudev/itshelper', label: 'GitHub', position: 'right' },
+        { type: 'localeDropdown', position: 'right' }, // language selector
+      ],
+    },
 
     footer: {
       style: 'dark',
@@ -118,18 +97,9 @@ const config = {
         {
           title: 'Community',
           items: [
-            {
-              label: 'GitHub Discussions',
-              href: 'https://github.com/itsdhanudev/itshelper/discussions',
-            },
-            {
-              label: 'Report Issues',
-              href: 'https://github.com/itsdhanudev/itshelper/issues',
-            },
-            {
-              label: 'Contribute',
-              href: 'https://github.com/itsdhanudev/itshelper',
-            },
+            { label: 'GitHub Discussions', href: 'https://github.com/itsdhanudev/itshelper/discussions' },
+            { label: 'Report Issues', href: 'https://github.com/itsdhanudev/itshelper/issues' },
+            { label: 'Contribute', href: 'https://github.com/itsdhanudev/itshelper' },
           ],
         },
         {
@@ -140,15 +110,11 @@ const config = {
           ],
         },
       ],
-      copyright:
-        `Copyright © ${new Date().getFullYear()} ITs Helper.`,
+      copyright: `Copyright © ${new Date().getFullYear()} ITs Helper.`,
     },
 
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+    prism: { theme: prismThemes.github, darkTheme: prismThemes.dracula },
+  }),
 };
 
 export default config;
