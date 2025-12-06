@@ -76,3 +76,6 @@ All rights belong to the original **ITS Magic Engine** developer.
 ## ⭐ Support the Project
 If you find this helpful, consider giving the repository a **star** ⭐ to support ongoing updates.
 
+> [!NOTE]
+> The ITSHelper website is not maintained by me. Any issues or concerns related to the website should be directed to the owner,
+> `@itsdhanudev`. I am solely a contributor, focusing on documentation.
