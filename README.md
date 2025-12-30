@@ -66,6 +66,8 @@ Feel free to:
 Just open a **Pull Request** or **Issue**.
 
 ---
+> [!CAUTION]
+> Project is closed! 
 
 ## ⚠️ Disclaimer
 This is **unofficial documentation** created by the community.  
